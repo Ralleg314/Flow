@@ -2,7 +2,8 @@
 using System.Collections;
 
 public class Enemy : MonoBehaviour {
-	private int HP;
+	public int HP;
+	Animator animator;
 
 	void OnCollisionEnter2D(Collision2D collision){
 		if (collision.gameObject.tag == "Player") {
@@ -13,15 +14,17 @@ public class Enemy : MonoBehaviour {
 		}
 	}
 
+	public void setHP(int n){
+		HP = n;
+		animator = GetComponent<Animator> ();
+	}
+
 	public int getHP(){
 		return HP;
 	}
 
 	public void getHit(){
 		HP--;
-	}
-
-	public void setHP(int n){
-		HP = n;
+		animator.SetInteger ("HP", HP);
 	}
 }
