@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour {
 		if (collision.gameObject.tag == "Player") {
 			getHit ();
 			if (getHP() == 0) {
+				//game.enemyKilled ();
 				Destroy (this.gameObject);
 			}
 		}

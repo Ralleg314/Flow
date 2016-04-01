@@ -2,10 +2,11 @@
 using System.Collections;
 
 public class game : MonoBehaviour {
-	private float currentTime;
-	private int round;
-	private int enemiesSpawned;
-	private const float time=10f;
+	public Transform Normal;
+	public float currentTime;
+	public int round;
+	public int enemiesSpawned;
+	public const float time=10f;
 	// Use this for initialization
 	void Start () {
 		enemiesSpawned = (int)Random.Range(1,3);
@@ -19,6 +20,9 @@ public class game : MonoBehaviour {
 		if(time==0 || enemiesSpawned==0){
 			currentTime = time;
 			enemiesSpawned = (int)Random.Range(1,3);
+			for (int i=0; i < enemiesSpawned; i++) {
+				spawnEnemy ("None");
+			}
 			round++;
 		}
 	}
@@ -27,7 +31,20 @@ public class game : MonoBehaviour {
 		return currentTime;
 	}
 
+	public int getRound(){
+		return round;
+	}
+
 	public int getEnemies(){
 		return enemiesSpawned;
+	}
+
+	public void enemyKilled(){
+		enemiesSpawned--;
+	}
+
+	public void spawnEnemy(string type){
+		Vector3 pos = new Vector3 (10, 10, 0);
+		Instantiate (Normal, pos, Quaternion.identity);
 	}
 }
