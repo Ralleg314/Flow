@@ -10,6 +10,6 @@ public class SpawnEnemies : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		GameObject go = (GameObject)Instantiate(Resources.Load("Normal"));
+		//GameObject go = (GameObject)Instantiate(Resources.Load("Normal"));
 	}
 }

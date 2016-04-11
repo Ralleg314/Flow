@@ -1,7 +1,7 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
-Project("{F1A76F66-CCA6-77C6-E628-D9CA58A6C8FC}") = "Flow", "Assembly-CSharp.csproj", "{C9E04F21-2FE8-02AF-EF4E-F4809D0E7E01}"
+Project("{F1A76F66-CCA6-77C6-E628-D9CA58A6C8FC}") = "Flow", "Assembly-CSharp-vs.csproj", "{C9E04F21-2FE8-02AF-EF4E-F4809D0E7E01}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,7 +17,7 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-				GlobalSection(MonoDevelopProperties) = preSolution
+					GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 
